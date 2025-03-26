@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote of the Day</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Quote of the Day</h1>
+            <p class="subtitle">Discover inspiring quotes from great minds</p>
+        </header>
+
+        <main>
+            <div class="quote-container">
+                <div class="quote-box">
+                    <div class="quote-content">
+                        <p id="quote-text" class="quote-text"></p>
+                        <p id="quote-author" class="quote-author"></p>
+                    </div>
+                    <div class="quote-navigation">
+                        <button class="nav-btn prev-btn" id="prev-quote">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="nav-btn next-btn" id="next-quote">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="search-container">
+                <h2>Search Quotes by Author</h2>
+                <div class="search-box">
+                    <input type="text" id="author-search" placeholder="Enter author name...">
+                    <button id="search-btn" class="btn">Search</button>
+                </div>
+                <div id="search-results" class="search-results"></div>
+            </div>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 

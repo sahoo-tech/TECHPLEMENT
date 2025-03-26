@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Quote of the Day</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #2c3e50;
+        }
+
+        .greeting-container {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            animation: fadeIn 1s ease;
+        }
+
+        .greeting-text {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+        }
+
+        .time-based-greeting {
+            font-size: 1.5rem;
+            color: #7f8c8d;
+            margin-bottom: 2rem;
+        }
+
+        .enter-button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .enter-button:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 480px) {
+            .greeting-container {
+                padding: 1.5rem;
+            }
+
+            .greeting-text {
+                font-size: 2rem;
+            }
+
+            .time-based-greeting {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="greeting-container">
+        <h1 class="greeting-text">{{ greeting }}</h1>
+        <p class="time-based-greeting">{{ time_based_greeting }}</p>
+        <button class="enter-button" onclick="window.location.href='/home'">Enter Website</button>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    color: #2c3e50;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeInDown 1s ease;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+
+.quote-container {
+    background: white;
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.quote-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.quote-box {
+    margin-bottom: 2rem;
+    position: relative;
+    min-height: 150px;
+}
+
+.quote-content {
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.quote-content.slide-left {
+    transform: translateX(-100%);
+}
+
+.quote-content.slide-right {
+    transform: translateX(100%);
+}
+
+.quote-text {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.quote-author {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    font-style: italic;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.quote-navigation {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    pointer-events: none;
+}
+
+.nav-btn {
+    background: rgba(52, 152, 219, 0.9);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    pointer-events: auto;
+}
+
+.nav-btn:hover {
+    background: rgba(52, 152, 219, 1);
+    transform: scale(1.1);
+}
+
+.nav-btn:active {
+    transform: scale(0.95);
+}
+
+.nav-btn i {
+    font-size: 1.2rem;
+}
+
+.prev-btn {
+    left: 1rem;
+}
+
+.next-btn {
+    right: 1rem;
+}
+
+.search-container {
+    background: white;
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease;
+}
+
+.search-container h2 {
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.search-box {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.search-results {
+    display: grid;
+    gap: 1rem;
+}
+
+.search-result-item {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #3498db;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.5s ease;
+}
+
+.search-result-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .quote-text {
+        font-size: 1.2rem;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .nav-btn {
+        width: 35px;
+        height: 35px;
+    }
+
+    .nav-btn i {
+        font-size: 1rem;
+    }
+} 
