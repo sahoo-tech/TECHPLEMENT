@@ -57,12 +57,10 @@ To set up the Quote of the Day application locally, follow these steps:
 ## Contributing
 Contributions are welcome! If you have suggestions for improvements or new features, please fork the repository and submit a pull request.
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
 
 ## Acknowledgments
 - Special thanks to the contributors of the quotes dataset from Kaggle.
 - Thanks to the Flask community for their excellent documentation and support.
 
-## Contact
-For any inquiries or feedback, please reach out to [your-email@example.com](mailto:your-email@example.com).
+
